@@ -8,6 +8,7 @@ public interface Impressora {
 
     public void imprimir (Imprimivel imprimivel);
 
+
     //esta metodo vai servir para imprimir um documento
     // que documento é esse?
 }

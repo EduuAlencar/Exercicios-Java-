@@ -7,6 +7,8 @@ public interface Imprimivel {
    public String getCabecalhoNF();
    public  String getCorpoNF();
 
+
+
     //noa importa quais sao os dados imprimiveis,so preciso definir
     // quais partes sao imprimivel
 }

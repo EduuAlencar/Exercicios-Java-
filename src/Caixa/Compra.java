@@ -1,15 +1,14 @@
 package Caixa;
-
 import Pagamento.Autorizaçao;
 import impressao.Imprimivel;
 
-public class Compra  implements Imprimivel, Autorizaçao {
-    //alem dos dados de compra do produto,devemos implememtar
-    //os metodos das duas INTERFACES
+public class Compra implements Imprimivel, Autorizaçao {
+    // Além dos dados de compra do produto, devemos implementar
+    // os métodos das duas INTERFACES
 
     private double valorCompra;
-    private  String produto;
-    private  String NomeCliente;
+    private String produto;
+    private String nomeCliente;
 
     @Override
     public double getValorCompra() {
@@ -20,7 +19,7 @@ public class Compra  implements Imprimivel, Autorizaçao {
         this.valorCompra = valorCompra;
     }
 
-    public String getProduto() {
+    public String getProduto(String pc_gamer) {
         return produto;
     }
 
@@ -29,20 +28,23 @@ public class Compra  implements Imprimivel, Autorizaçao {
     }
 
     public String getNomeCliente() {
-        return NomeCliente;
+        return nomeCliente;
     }
 
     public void setNomeCliente(String nomeCliente) {
-        NomeCliente = nomeCliente;
+        this.nomeCliente = nomeCliente;
     }
+
 
     @Override
     public String getCabecalhoNF() {
+        // mostrar o nome do cliente
         return this.getNomeCliente();
     }
 
     @Override
     public String getCorpoNF() {
-      return this.produto + " = " + this.getValorCompra();
+        // mostrar o produto e o valor da compra
+        return this.produto + " = " + this.valorCompra;
     }
 }
