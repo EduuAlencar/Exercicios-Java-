@@ -18,34 +18,29 @@ package Interface;
 
 public class Principal {
 
-
-
-    public void calcularSalarioFuncionario(Funcionario funcionario){
-        if (funcionario instanceof Gerente){
-
-        } else if (funcionario instanceof  Administrador){
+    public void calcularSalariodeFuncionario (Funcionario funcionario) {
+        if (funcionario instanceof Gerente) {
+            //Calculo para Gerente
+        } else if (funcionario instanceof Administrador) {
+            //Calculo para admnistrador
+        } else {
+            System.err.println("A classe não implementa a InterfaceDAO, " +
+                    "nenhum procedimento foi executado.");
         }
-
-        else {
-            System.out.println("A classe nao implementa a interfaceDAD");
-        }
-
+    }
+    public static void main(String[] args) {
 
         Funcionario func01 = new Funcionario();
         Gerente Ger01 = new Gerente();
-        String nome = "Eduardo";
-
-        public void calcularSalarioFuncionario(){
-
-        }
+        String nome = "Anderson";
 
         if (func01 instanceof interfaceDAD){
             func01.salvar(nome);
             System.out.println(nome);
         }
-        else {
-            System.out.println("A classe nao implementa a interfaceDAD,nenhum procedimento foi executado");
+        else{
+            System.err.println("A classe não implementa a InterfaceDAO, " +
+                    "nenhum procedimento foi executado.");
         }
     }
-
 }
