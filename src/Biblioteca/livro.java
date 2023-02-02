@@ -12,7 +12,7 @@ public abstract class livro {
     public  String  autor;
 
 
-
+// void
     public void entradaDados(){
         System.out.println("Informe o nome do livro : ");
         nome = input.nextLine();
